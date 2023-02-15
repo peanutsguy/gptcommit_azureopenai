@@ -65,9 +65,9 @@ impl OpenAIClient {
 
         let request = self
             .client
-            .post("https://api.openai.com/v1/completions")
+            .post("https://gptcommit.openai.azure.com/openai/deployments/completions/completions?api-version=2022-12-01") //https://gptcommit.openai.azure.com/
             .header("Content-Type", "application/json")
-            .header("Authorization", format!("Bearer {}", self.api_key))
+            .header("api-key", format!("{}", self.api_key))
             .json(&json_data);
 
         debug!("Sending request to OpenAI:\n{:?}", request);
