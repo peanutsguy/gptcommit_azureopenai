@@ -1,19 +1,19 @@
 [package]
-name = "gptcommit"
-version = "0.1.16"
+name = "gptcommit_azureopenai"
+version = "0.1"
 edition = "2021"
 rust-version = "1.67"
-authors = ["Roger Zurawicki <roger@zura.wiki>"]
+authors = ["Roger Zurawicki <roger@zura.wiki>","Marcelo Galas <marcelo.galas@yahoo.com>"]
 categories = ["development-tools"]
 keywords = ["openai", "githook", "git", "ai", "gpt"]
 description = "A git prepare-commit-msg hook for summarizing commits with GPT-3."
 readme = "README.md"
 license = "MIT"
-homepage = "https://github.com/zurawiki/gptcommit"
-repository = "https://github.com/zurawiki/gptcommit"
+homepage = "https://github.com/peanutsguy/gptcommit_azureopenai"
+repository = "https://github.com/peanutsguy/gptcommit_azureopenai"
 
 [[bin]]
-name = "gptcommit"
+name = "gptcommit_azureopenai"
 path = "src/main.rs"
 
 [dependencies]
