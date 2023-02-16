@@ -11,7 +11,7 @@ set -eu
     echo "foo" > $TEMPFILE
 
     GPTCOMMIT__OPENAI__MODEL="text-ada-001" \
-    gptcommit prepare-commit-msg \
+    gptcommit_azureopenai prepare-commit-msg \
       --git-diff-content ../tests/data/example_1.diff \
       --commit-msg-file $TEMPFILE \
       --commit-source ""

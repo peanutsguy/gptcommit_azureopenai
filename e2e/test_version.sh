@@ -1,8 +1,8 @@
 #!/bin/sh
 set -eu
 
-gptcommit --version
+gptcommit_azureopenai --version
 # assert matches version in Cargo.toml
 
-gptcommit --help
+gptcommit_azureopenai --help
 

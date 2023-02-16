@@ -221,4 +221,4 @@ pub fn get_user_config_path() -> Option<PathBuf> {
     }
     None
 }
-const APP_NAME: &str = "gptcommit";
+const APP_NAME: &str = "gptcommit_azureopenai";

@@ -116,7 +116,7 @@ jobs:
             - id: check
               run: |
                   set +e
-                  ./scripts/is_version_already_uploaded.sh gptcommit
+                  ./scripts/is_version_already_uploaded.sh gptcommit_azureopenai
                   export EXIT_CODE="$?"
                   set -e
                   if [[ "$EXIT_CODE" == "7" ]]; then
@@ -131,5 +131,5 @@ jobs:
             - name: Determine the tag name
               id: tag
               run: |
-                  export TAG_NAME="v$(./scripts/get_current_version.sh gptcommit)"
+                  export TAG_NAME="v$(./scripts/get_current_version.sh gptcommit_azureopenai)"
                   echo "tag=$TAG_NAME" >> $GITHUB_OUTPUT

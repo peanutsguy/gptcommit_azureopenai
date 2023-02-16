@@ -16,8 +16,8 @@ use crate::{
 pub(crate) async fn main(settings: Settings) -> Result<()> {
     println!("{}", "Installing gptcommit hook...".green().bold());
 
-    find_executable("git", "To use gptcommit, you must have git on your PATH")?;
-    find_executable("gptcommit", " To use gptcommit, you must have gptcommit on your PATH. Install with `cargo install gptcommit`")?;
+    find_executable("git", "To use gptcommit_azureopenai, you must have git on your PATH")?;
+    find_executable("gptcommit_azureopenai", " To use gptcommit_azureopenai, you must have gptcommit_azureopenai on your PATH. Install with `cargo install gptcommit_azureopenai`")?;
 
     // confirm in git root
     let hooks_path = get_hooks_path()?;
@@ -41,7 +41,7 @@ pub(crate) async fn main(settings: Settings) -> Result<()> {
 
     println!(
         "{}",
-        "gptcommit hook successfully installed!".green().bold(),
+        "gptcommit_azureopenai hook successfully installed!".green().bold(),
     );
 
     if let Settings {

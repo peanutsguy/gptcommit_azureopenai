@@ -6,10 +6,10 @@ use colored::Colorize;
 use crate::{cmd::find_executable, git::get_hooks_path, settings::Settings};
 
 pub(crate) async fn main(_settings: Settings) -> Result<()> {
-    println!("{}", "Uninstalling gptcommit hook...".green().bold());
+    println!("{}", "Uninstalling gptcommit_azureopenai hook...".green().bold());
 
     find_executable("git", "To use gptcommit, you must have git on your PATH")?;
-    find_executable("gptcommit", " To use gptcommit, you must have gptcommit on your PATH. Install with `cargo install gptcommit`")?;
+    find_executable("gptcommit_azureopenai", " To use gptcommit, you must have gptcommit on your PATH. Install with `cargo install gptcommit`")?;
 
     // confirm in git root
     let hooks_path = get_hooks_path()?;
@@ -26,11 +26,11 @@ pub(crate) async fn main(_settings: Settings) -> Result<()> {
             fs::remove_file(&prepare_commit_msg_path)?;
             println!(
                 "{}",
-                "gptcommit hook successfully uninstalled!".green().bold(),
+                "gptcommit_azureopenai hook successfully uninstalled!".green().bold(),
             );
         } else {
             warn!(
-                "{} is not gptcommit's prepare-commit-msg hook. Skipping uninstall.",
+                "{} is not gptcommit_azureopenai's prepare-commit-msg hook. Skipping uninstall.",
                 prepare_commit_msg_path.display()
             );
             warn!(
