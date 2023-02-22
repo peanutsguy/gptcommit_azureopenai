@@ -58,7 +58,7 @@ Persist your OpenAI key
 gptcommit config set openai.api_key sk-...
 ```
 
-You can also config this setting via the `GPTCOMMIT__OPENAI__API_KEY`.
+You can also config this setting via the `GPTCOMMIT__AZOAI__API_KEY`.
 
 To maintain compatibility with other OpenAI clients, we support the `OPENAI_API_KEY` environment variables. This will take the highest precedence.
 
